@@ -14,20 +14,27 @@ Times below are Lagos time (WAT, UTC+1).
 | Fri 2026-10-16 6:07 PM | v2-side-hustle.mp4 (15.2s) | money / side hustle (Wealth) | FAILED (Buffer: media processing delay); moved to Oct 19 | 6ad08aec675f058f0b3f4fb1 |
 | Sat 2026-10-17 6:07 PM | v3-alarm-boss-r2.mp4 (16.4s) | discipline / Snooze Golem / Monk Mode | sent | 6ad09f086e74276ac067406a |
 | Sun 2026-10-18 6:07 PM | v3-fog-hydra-r2.mp4 (16.5s) | mind / Fog Hydra / 30-Day Reader | sent (6:08 PM WAT) | 6ad09f0a6e74276ac06740cd |
-| Mon 2026-10-19 6:07 PM | v2-side-hustle.mp4 (15.2s) | money / side hustle (retry of failed Oct 16 post) | scheduled | 6ad08aec675f058f0b3f4fb1 |
-| Tue 2026-10-20 6:07 PM | v4-rank-diamond.mp4 (16.5s) | level-ups / rank tiers Bronze to Diamond | scheduled | 6ad5e511809c386ae44cf1fc |
-| Wed 2026-10-21 6:07 PM | v4-lagos-traffic.mp4 (16.5s) | Lagos POV humour / Grind Day / streak boost | scheduled | 6ad5e5152c8101e643d586ac |
+| Mon 2026-10-19 6:07 PM | v2-side-hustle.mp4 (15.2s) | money / side hustle (retry of failed Oct 16 post) | FAILED again (Buffer: media processing delay; status error, never sent; left as-is) | 6ad08aec675f058f0b3f4fb1 |
+| Tue 2026-10-20 6:07 PM | v4-rank-diamond.mp4 (16.5s) | level-ups / rank tiers Bronze to Diamond | sent (6:08 PM WAT, confirmed in list_posts) | 6ad5e511809c386ae44cf1fc |
+| Wed 2026-10-21 6:07 PM | v4-lagos-traffic.mp4 (16.5s) | Lagos POV humour / Grind Day / streak boost | sent (6:08 PM WAT, confirmed in list_posts) | 6ad5e5152c8101e643d586ac |
 | Thu 2026-10-22 6:07 PM | v4-couch-titan.mp4 (17.0s) | gym / Couch to 5K campaign / Couch Titan boss | scheduled | 6ad5e51916ad7c3dd5144213 |
+| Fri 2026-10-23 6:07 PM | v5-full-clear.mp4 (16.3s) | feature reveal / Full Clear loot chest | scheduled | 6ad9d80fd7259dd11b14448f |
+| Sat 2026-10-24 6:07 PM | v5-nepa-light.mp4 (16.6s) | Lagos POV humour / NEPA took light / no-light quests | scheduled | 6ad9d81781158a0b1794e7e9 |
+| Sun 2026-10-25 6:07 PM | v5-broke-goblin.mp4 (16.8s) | money / Broke to Budgeted campaign / Broke Goblin | scheduled | 6ad9d81c4278e7eb700c41f2 |
 
 **Schedule note (2026-10-15):** The Oct 14 v2-side-hustle slot was moved to Oct 16. Buffer post 6ad08aec675f058f0b3f4fb1 was created 2026-10-15 09:12 WAT; the original 6acca97a04be3441f5be5c4b is gone.
 
 Angles used so far (don't repeat): gym/boss hit, "your life but it's an RPG" 4-stat overview, miss-a-day HP/shields/Rise Again,
 side hustle = XP (Wealth quests + Wealth bosses + Wealth coin perk), habits pick your class (classes + title ladder),
 discipline Snooze Golem / Doomscroll Wraith / Monk Mode, reading Fog Hydra / 30-Day Reader / Mind perk.
-rank tiers Bronze to Diamond (v4), Lagos traffic POV / Grind Day / streak XP tiers (v4), Couch to 5K / Couch Titan (v4).
-Still unused: Full Clear chest (+25 XP, 5-25 coin chest), avatar/wardrobe and boss loot (Wraith-slayer shades, Demon-horn headband),
-Broke to Budgeted (Broke Goblin), Idea to First Sale (Fear Phantom), burnout / Rise Again deep-dive, Grind slots unlock (3 to 5),
-epic quests (New PR, Cash In, Book Boss, Dopamine Reset), Lagos POV angles (NEPA / light off, Friday owambe, danfo again).
+rank tiers Bronze to Diamond (v4), Lagos traffic POV / Grind Day / streak XP tiers (v4), Couch to 5K / Couch Titan (v4),
+Full Clear loot chest (v5; real numbers: +25 XP, +15 coins, chest 5-25, +5 HP), NEPA took light / no-light quests / "UP NEPA!" (v5),
+Broke to Budgeted / Broke Goblin (v5).
+Still unused: avatar/wardrobe and boss loot (Wraith-slayer shades, Demon-horn headband, Moon hoodie, Serpent-scale jacket, Hydra scholar cape;
+loot chance normal 25% / hard 40% / elite 60%, earned-only, never sold: data/cosmetics.ts + config.ts boss.rewards),
+Idea to First Sale (Fear Phantom), burnout / Rise Again deep-dive, Grind slots unlock (3 to 5; v5 full-clear only showed a 4-quest list),
+epic quests (New PR, Cash In, Book Boss, Dopamine Reset; 7-day epic cooldown), Coin Shop (Streak Shield 300c, HP Potion 80c),
+Lagos POV angles (Friday owambe, danfo again, Sunday jollof/Home Chef).
 
 ---
 
@@ -158,6 +165,67 @@ epic quests (New PR, Cash In, Book Boss, Dopamine Reset), Lagos POV angles (NEPA
 - Caption:
   Couch to 5K, but the final boss is your couch 🛋️👾 30 days of run/walk quests. +20 XP a day, +100 XP at every checkpoint, +1,000 XP when you beat the Couch Titan on Day 30. First 3 days free. Grind Life RPG, link in bio.
   #GrindLifeRPG #CouchTo5K #GymTok #RunningMotivation #FitnessJourney
+
+## Batch v5 (made 2026-10-22 ~10:30 AM WAT, media commit 7f73c1c)
+
+Built with `build/videos_v5.py` (reuses `build/tk.py`). All three: 1080x1920, H.264 yuv420p, 30 fps, AAC 44.1 kHz code-made chiptune,
++faststart (moov before mdat), ~1 MB. Raw URLs verified HTTP 200 with Content-Length = local size. Buffer cover offset 2.2 s.
+Status checked 2026-10-22 ~10:33 AM WAT: all three `scheduled`, error null.
+Also confirmed: Oct 20 (6ad5e511809c386ae44cf1fc) sent 6:08 PM WAT, Oct 21 (6ad5e5152c8101e643d586ac) sent 6:08 PM WAT;
+Oct 19 side-hustle retry (6ad08aec675f058f0b3f4fb1) is `error` again ("media hit some delays while processing"), never sent. Left alone.
+
+### v5-full-clear.mp4 (Fri 2026-10-23) · Buffer 6ad9d80fd7259dd11b14448f
+- Raw URL: https://raw.githubusercontent.com/mastermayk/grindlife-media/main/tiktok/v5-full-clear.mp4 (1,133,629 bytes, 16.3 s)
+- Thumbnail: v5-full-clear-thumb.png
+- Hook: "Clear EVERY quest today and you open A LOOT CHEST" (shaking chest) + "IT IS CALLED A FULL CLEAR" / "Real habits. Real loot."
+- Beats: today's grind, 4 quests (Level 5 = 4 slots): Gym Session +35 XP, Pay Yourself +20, Make Your Bed +10, Deep Read +20 →
+  3 ticked = "GRIND DAY LOCKED / Full Clear +25 XP" (the app's own labels) → 4th ticked = FULL CLEAR! → chest opens: +25 XP, +15 COINS,
+  BONUS CHEST rolls 5 to 25 (lands on +18 as an example), +5 HP extra heal (+15 HP total with the Grind Day) → live end card
+- Sources: engine/config.ts (fullClear {xp 25, coins 15, chestMin 5, chestMax 25}; hp.fullClearExtraHeal 5 + grindDayHeal 10; grindSlots L5 = 4;
+  grindDayThreshold 3; quest hard 35 / medium 20 / easy 10), engine/game.ts checkGrindDay (Full Clear = every scheduled Grind quest done),
+  app/(tabs)/index.tsx ('Grind Day locked', 'Full Clear +25 XP'), data/quests.ts (gym-session hard, pay-yourself medium, make-your-bed easy, deep-read medium)
+- Caption:
+  Clear every quest today and you open a loot chest 🎁 3 quests lock the Grind Day. Finish your whole list = Full Clear: +25 XP, +15 coins and a bonus chest worth 5 to 25 more coins, plus +5 HP. Grind Life RPG is free in your browser, link in bio.
+  #GrindLifeRPG #HabitTracker #Gamification #LevelUpYourLife #ProductivityTok
+
+### v5-nepa-light.mp4 (Sat 2026-10-24) · Buffer 6ad9d81781158a0b1794e7e9
+- Raw URL: https://raw.githubusercontent.com/mastermayk/grindlife-media/main/tiktok/v5-nepa-light.mp4 (953,705 bytes, 16.6 s)
+- Thumbnail: v5-nepa-light-thumb.png
+- Hook: "POV: NEPA took light" (bulb + "LIGHT: ON" flips to "LIGHT: OFF" at 0.35 s, the skyline windows black out) + "...and the grind DID NOT STOP"
+- Beats: QUESTS THAT DON'T NEED LIGHT: Home Burner (20-minute home workout or 50 push-ups) +20 XP, Still Mind (10 min meditation) +10 XP,
+  Lights Out (in bed by your target bedtime) +20 XP, "NEPA SAID BEDTIME", GRIND 3/3 → "LIGHT: OFF / STREAK: ON", +10 HP Grind Day heal,
+  +2 HP for every quest, "Light go, streak no go." → lights come back: "UP NEPA! (you already secured the day)" → live end card
+- Sources: data/quests.ts (home-burner medium, still-mind easy, lights-out medium), config.ts (quest medium 20 / easy 10, grindDayThreshold 3,
+  hp.grindDayHeal 10, hp.perQuestHeal 2; game.ts heal per quest)
+- Caption:
+  POV: NEPA took light and the grind did not stop 💡 Home Burner: 50 push-ups = +20 XP. Still Mind: 10 min meditation = +10 XP. Lights Out: in bed on time = +20 XP. 3 quests = Grind Day, +10 HP, streak alive. Light go, streak no go. Grind Life RPG is free in your browser, link in bio.
+  #GrindLifeRPG #NEPA #LagosLife #HabitTracker #NaijaTech
+
+### v5-broke-goblin.mp4 (Sun 2026-10-25) · Buffer 6ad9d81c4278e7eb700c41f2
+- Raw URL: https://raw.githubusercontent.com/mastermayk/grindlife-media/main/tiktok/v5-broke-goblin.mp4 (1,032,406 bytes, 16.8 s)
+- Thumbnail: v5-broke-goblin-thumb.png
+- Hook: '"Where does my money go?" is now a BOSS' (pixel Broke Goblin) + "DAY 30 BOSS: THE BROKE GOBLIN"
+- Beats: CAMPAIGN: BROKE TO BUDGETED, Week 1 See it (Find your top 3 money leaks), Week 2 Plan it (Create a separate savings pot or account),
+  Week 3 Plug leaks (Shop around or negotiate one bill), Week 4 Grow it (Write a simple offer: what, for whom, at what price),
+  "No-Spend Days on Day 6, 15 and 26" → Day 30: Compare to your Day 3 baseline / Final review / Commit to month 2 → DEFEATED,
+  +1,000 XP / +500 COINS, "First 3 days free. Guidance on habits, not financial advice." → live end card
+- Sources: data/campaigns.ts (broke-to-budgeted tasks, week titles, Day 29 baseline compare, Day 30 "Boss: The Broke Goblin. Final review and commit
+  to month 2", notice text; CAMPAIGN_REWARDS finishXp 1000 / finishCoins 500, freePreviewDays 3; campaigns are Premium)
+- Caption:
+  "Where does my money go?" is now a boss fight 💸👺 Broke to Budgeted is a 30-day campaign: find your top 3 money leaks, open a savings pot, negotiate one bill, write your first offer. Then beat the Broke Goblin on Day 30 for +1,000 XP. First 3 days free. Habits, not financial advice. Grind Life RPG is free in your browser, link in bio.
+  #GrindLifeRPG #MoneyHabits #Budgeting #PersonalFinance #NaijaTech
+
+---
+## Build notes (updated 2026-10-22)
+
+- 2026-10-22: `build/` was wiped again by a box restore (and the media clone's working tree had build/ deleted, unstaged).
+  Restored with `git checkout -- build` in /workspace/grindlife-media, then copied tk.py / videos_v4.py / pixel.py into `tiktok/build/`.
+- New `build/videos_v5.py`: `python3 videos_v5.py <slug>|all` renders `../v5-<slug>.mp4` + thumb; `... <slug> frames` writes `build/check/v5/`.
+  Slugs: `full-clear`, `nepa-light`, `broke-goblin`. Adds sprites goblin, chest_open, bulb (BULB_OFF recolor), check; helpers `quest_row`,
+  `tickbox`, `dark_bg(seed)` (same skyline with window lights replaced + dimmed, for the NEPA blackout).
+- Watch-outs found in review: banner heading + right-hand label overlapped at pix(56) (now pix(48)); text placed at a box's bottom edge
+  collides with the border (keep ≥60 px inside); coins_burst arcs up through anything above its origin (keep text clear or time it after).
+- Backed up to mastermayk/grindlife-media `build/` again (videos_v5.py, tk.py, pixel.py, README, tiktok-log.md).
 
 ---
 ## Build notes (updated 2026-10-19)
